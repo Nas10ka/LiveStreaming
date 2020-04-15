@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+      - 6
+before_script:
+    - export DISPLAY=:99.0
+    - sh -e /etc/init.d/xvfb start
+    - sleep 3
+script: 
+    - sed -e "s#@YOUR_PARTNER_ID@#$PARTNER_ID#g" -e "s#@YOUR_ADMIN_SECRET@#$ADMIN_SECRET#g" -e "s#@SERVICE_URL@#https://www.kaltura.com#g" test/config.template.js > test/config.js
+    - cd test && npm install && ./node_modules/.bin/karma start --browsers PhantomJS --single-run
+notifications:
+  email:
+    recipients:
+      - Jonathan.Kanarek@kaltura.com
+      - jess.portnoy@kaltura.com
+    on_success: change
+    on_failure: always
