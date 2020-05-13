@@ -12,13 +12,20 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+const defaultOnChange = () => null;
 
-export default function Text({ value, label }) {
+export default function Text({ value, label, onChange={defaultOnChange}, type='text' }) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <TextField label={label} variant="outlined" value={value} onChange={() => null} />
+      <TextField
+        label={label}
+        variant="outlined"
+        value={value}
+        onChange={onChange}
+        type={type}
+      />
     </div>
   );
 }

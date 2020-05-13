@@ -13,7 +13,7 @@ const styles = (theme) => ({
     justifyContent: "center",
     "& > *": {
       margin: theme.spacing(1),
-      width: theme.spacing(50),
+      width: theme.spacing(100),
       height: "auto",
       alignItems: "center",
       display: "flex",

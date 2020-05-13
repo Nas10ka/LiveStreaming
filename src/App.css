@@ -39,3 +39,6 @@ body * {
     transform: rotate(360deg);
   }
 }
+.MuiTextField-root {
+  width: 100%;
+}

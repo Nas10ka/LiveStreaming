@@ -1,0 +1,20 @@
+POST https://www.googleapis.com/youtube/v3/liveStreams?part=snippet%2Ccdn%2CcontentDetails%2Cstatus&key=AIzaSyB99huaz6ldMqdMLaoM1jqmpRcIsU7uIFc
+
+Authorization: Bearer [YOUR_ACCESS_TOKEN]
+Accept: application/json
+Content-Type: application/json
+
+{
+  "snippet": {
+    "title": "Your new video stream's name",
+    "description": "A description of your video stream. This field is optional."
+  },
+  "cdn": {
+    "frameRate": "60fps",
+    "ingestionType": "rtmp",
+    "resolution": "1080p"
+  },
+  "contentDetails": {
+    "isReusable": true
+  }
+}
