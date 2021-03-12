@@ -5,6 +5,7 @@ import FacebookUI from "./Facebook";
 import KalturaUI from "./Kaltura";
 import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
+import Wowza from './Wowza';
 
 const styles = (theme) => ({
   root: {
@@ -29,13 +30,17 @@ class App extends Component {
 
     return (
       <div className={classes.root + " App"}>
-        <Paper elevation={1}>
+         
+        <Wowza />
+
+        {/* <Paper elevation={1}>
           <YoutubeUI />
         </Paper>
         <Paper elevation={1}>
           <FacebookUI />
         </Paper>
-        <KalturaUI />
+
+        <KalturaUI /> */}
       </div>
     );
   }
